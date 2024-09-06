@@ -176,17 +176,16 @@ def main():
 
     try:
         # data = pd.read_csv('combined.csv', low_memory=True)
-        raw_summary = pd.read_csv('clean full data/combined_clean.csv', low_memory=True)
         # combined = pd.read_csv('raw data/combined.csv', memory_map=True)
         # memory_mapping in numpy
         # total_data = pd.read_csv('preprocessed data/total.csv', low_memory=True)
         # full_data = pd.read_csv('clean full data/0.2_combined_clean.csv', low_memory=True)
-        # data_50 = pd.read_csv('preprocessed data/0.5.csv', low_memory=True)
+        data_50 = pd.read_csv('data/0.5.csv', low_memory=True)
         # data_20 = pd.read_csv('preprocessed data/0.2.csv', low_memory=True)
         # data_30 = pd.read_csv('clean full data/0.3_combined_clean.csv', low_memory=True)
         # data_75 = pd.read_csv('preprocessed data/0.75.csv', low_memory=True)
         print('csv read in successfully')
-        data = raw_summary
+        data = data_50
     except FileNotFoundError:
         print("making new read")
         data_init, class_data = init_data()
